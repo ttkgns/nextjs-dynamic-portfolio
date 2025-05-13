@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧑‍💻 Dynamic Portfolio with Next.js, JavaScript & Tailwind CSS
 
-## Getting Started
+This is a dynamic and responsive portfolio web application built using **Next.js**, **JavaScript**, and **Tailwind CSS**. It showcases personal information, projects, services, tools, and contact functionality, with all the content managed via structured JavaScript files for ease of customization.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- ⚡ Built with Next.js for fast performance and server-side rendering
+- 🎨 Styled using Tailwind CSS for responsive and modern design
+- 🔄 Dynamically rendered content from a central JavaScript file
+- 🌙 Light/Dark mode support
+- 🧰 Icons and assets handled via a centralized `assets.js` file
+- 📬 Functional contact form powered by Web3Forms
+
+---
+
+## 📦 Data Configuration: `assets.js`
+
+All portfolio content (images, project data, service information, personal details, etc.) is imported and managed through `assets.js`. This file acts as a central content manager for:
+
+- 👤 Personal details (`personalData`)  
+- 🧳 Work/projects (`workData`)  
+- 🛠 Services (`serviceData`)  
+- 🧾 Education and skills (`infoList`)  
+- 🧰 Tools & technologies (`toolsData`)  
+- 🖼 All static images and icons (exported via `assets` object)  
+
+> This modular structure allows for easy updates without touching the core components or JSX code.
+
+## 🛠 Example: Customize personalData
+
+Edit `assets.js` to update your personal info:
+
+```js
+export const personalData = {
+  name: "Name",
+  fullName: "Full Name",
+  jobTitle: "web developer",
+  introduction:
+    "I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.",
+  resumeName: "/sample-resume.pdf", // Add your resume file to public folder
+  aboutIntroduction:
+    "I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.",
+  servicesIntroduction:
+    "I am a frontend developer from California, USA with 10 years of experience in multiple  companies like Microsoft, Tesla and Apple.",
+  workIntroduction:
+    "Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.",
+  contactAccessKey: "YOUR ACCESS KEYE HERE", // Create an access key on Web3Forms and paste it here
+  emailAddress: "emailaddress@mail.com",
+  githubLink: "https://github.com/",
+  linkedinLink: "https://www.linkedin.com/",
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/ttkgns/nextjs-dynamic-portfolio.git
+cd nextjs-dynamic-portfolio
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run the development server
+npm run dev
