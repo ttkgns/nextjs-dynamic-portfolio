@@ -14,7 +14,7 @@ const ovo = Ovo({
 
 const notoSerifKR = Noto_Serif_KR({
   weight: ['400', '700'],
-  subsets: ['korean'], 
+  subsets: ['latin'], 
   display: 'swap',
 });
 
